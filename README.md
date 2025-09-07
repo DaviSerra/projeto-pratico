@@ -1,69 +1,67 @@
-# React + TypeScript + Vite
+# Site de Desaparecidos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Dados de Inscrição:**
 
-Currently, two official plugins are available:
+- **Nome Completo:** Davi serra de campos
+- **Email:** davyserra67@gmail.com
+- **Telefone:** (65) 99292-0175
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Aplicação React para localização de pessoas desaparecidas com cadastro e busca de informações.
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React + Vite
+- Tailwind CSS
+- Docker
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🔧 Configuração
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### Variáveis de Ambiente
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Crie `.env` na raiz:
+
+```env
+VITE_ABITUS_API_URL=https://abitus-api.geia.vip
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Executando com Docker
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Build
+docker build -t projeto-pratico .
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Executar
+docker run -p 5173:5173 --name projeto-pratico projeto-pratico
+
+# Se der conflito de nome:
+docker rm projeto-pratico
+```
+
+### Executando Localmente
+
+```bash
+npm install
+npm run dev
+```
+
+## 🐳 Docker
+
+- **Imagem:** `node:20-alpine`
+- **Porta:** 5173
+- **Container:** `projeto-pratico`
+
+### Comandos Úteis
+
+```bash
+# Ver logs
+docker logs projeto-pratico
+
+# Parar
+docker stop projeto-pratico
+
+# Remover
+docker rm projeto-pratico
+
+# Listar containers
+docker ps -a
 ```
