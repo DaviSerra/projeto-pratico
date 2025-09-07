@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --max-width-8xl: 100rem;
+
+  --color-dark-900: #0c1117;
+  --color-dark-800: #1a202c;
+  --color-dark-700: #2d3748;
+  --color-dark-600: #4a5568;
+  --color-dark-500: #718096;
+
+  --color-light-50: #fdfdfd;
+  --color-light-100: #f7fafc;
+  --color-light-200: #edf2f7;
+  --color-light-300: #e2e8f0;
+
+  --color-primary-900: #0d3b66;
+  --color-primary-700: #145da0;
+  --color-primary-500: #0077b6;
+  --color-primary-300: #90e0ef;
+
+  --color-secondary-900: #7b341e;
+  --color-secondary-700: #c05621;
+  --color-secondary-500: #ed8936;
+  --color-secondary-300: #fbd38d;
+
+  --color-success-100: #e6f9f0;
+  --color-success-300: #81e6d9;
+  --color-success-600: #2f855a;
+  --color-success-800: #22543d;
+
+  --color-alert-100: #ffe5e5;
+  --color-alert-300: #fc8181;
+  --color-alert-600: #c53030;
+  --color-alert-800: #742a2a;
+}
