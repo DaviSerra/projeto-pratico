@@ -31,7 +31,7 @@ VITE_ABITUS_API_URL=https://abitus-api.geia.vip
 docker build -t projeto-pratico .
 
 # Executar
-docker run -p 5173:5173 --name projeto-pratico projeto-pratico
+docker run -p 5173:5173 projeto-pratico
 
 # Se der conflito de nome:
 docker rm projeto-pratico
