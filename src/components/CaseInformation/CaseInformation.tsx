@@ -52,7 +52,7 @@ const CaseInformation = ({ ocoId, onSuccess }: Props) => {
   };
 
   return (
-    <div className="bg-light-50 dark:bg-dark-900 border border-light-300 dark:border-dark-700 rounded-lg shadow-sm">
+    <div className="bg-light-50 mt-10 dark:bg-dark-900 border border-light-300 dark:border-dark-700 rounded-lg shadow-sm">
       <div className="px-6 py-4 border-b border-light-200 dark:border-dark-800">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 bg-primary-500 rounded-md flex items-center justify-center">
