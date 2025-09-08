@@ -8,8 +8,8 @@ import PessoaCard from "../PessoaCard/PessoaCard";
 import Pagination from "../Pagination/Pagination";
 import { Archive } from "lucide-react";
 import Loading from "../../Loading/Loading";
-import Error from "../../Error/Error";
 import PessoaFilter from "../PersonFilter/PersonFilter";
+import ErrorFeedback from "../../ErrorFeedback/ErrorFeedback";
 
 const PessoasList = () => {
   const [paginatedData, setPaginatedData] = useState<PaginatedPessoas | null>(
@@ -60,7 +60,7 @@ const PessoasList = () => {
 
   if (error) {
     return (
-      <Error
+      <ErrorFeedback
         message={error}
         onRetry={() => fetchPessoas(currentPage, activeFilters)}
       />

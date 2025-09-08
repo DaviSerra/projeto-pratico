@@ -15,11 +15,11 @@ import {
 import type { Pessoa } from "../interfaces/pessoa.interface";
 import { getPessoaById } from "../services/pessoa-detalhe.service";
 
-import Error from "../Error/Error";
 import Loading from "../Loading/Loading";
 import { calculateTimeDisappeared } from "../utils/time-utils";
 import CaseInformation from "../components/CaseInformation/CaseInformation";
 import { formatDate } from "../utils/format-date";
+import ErrorFeedback from "../ErrorFeedback/ErrorFeedback";
 
 const PersonDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -51,7 +51,9 @@ const PersonDetail = () => {
   }
 
   if (error) {
-    return <Error message={error} onRetry={() => window.location.reload()} />;
+    return (
+      <ErrorFeedback message={error} onRetry={() => window.location.reload()} />
+    );
   }
 
   if (!pessoa) {
