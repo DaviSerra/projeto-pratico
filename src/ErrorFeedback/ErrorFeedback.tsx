@@ -6,7 +6,7 @@ interface ErrorProps {
   onRetry?: () => void | Promise<void>;
 }
 
-const Error = ({
+const ErrorFeedback = ({
   message,
   title = "Erro ao carregar dados",
   onRetry,
@@ -38,4 +38,4 @@ const Error = ({
   );
 };
 
-export default Error;
+export default ErrorFeedback;
