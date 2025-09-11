@@ -1,6 +1,6 @@
 # Site de Desaparecidos
 
-🌐 **Deploy:** https://projeto-pratico.pages.dev/
+ **Deploy:** https://projeto-pratico.pages.dev/
   
 **Dados de Inscrição:**
 
@@ -10,13 +10,13 @@
 
 Aplicação React para localização de pessoas desaparecidas com cadastro e busca de informações.
 
-## 🚀 Tecnologias
+##  Tecnologias
 
 - React + Vite
 - Tailwind CSS
 - Docker
 
-## 🔧 Configuração
+##  Configuração
 
 ### Variáveis de Ambiente
 
@@ -46,7 +46,7 @@ npm install
 npm run dev
 ```
 
-## 🐳 Docker
+##  Docker
 
 - **Imagem:** `node:20-alpine`
 - **Porta:** 5173
